@@ -19,7 +19,7 @@ if(isset($_POST['login']) && $username !="" && $pass !=""){
         $_SESSION['username'] = $username;
       
     }
-    header('location: http://localhost/free-travel-website-template/view/');
+    header('location: http://localhost/asm/view/');
 
 
 }
