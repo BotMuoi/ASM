@@ -99,6 +99,7 @@
                         echo '<div class="hello" style="margin-top: 30px;">'.$_SESSION['username'].'</div>'
                         ?>
                         <a href="../admin/modules/log-out.php" style="margin-top: 30px; margin-left: 10px;" >Logout</a>
+                        <a style=" margin-top: 30px; margin-left: 15px;" href="../admin/index.php">Web admin</a>
                     </div>
                 </div>
             </nav>

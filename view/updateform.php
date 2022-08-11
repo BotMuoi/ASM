@@ -1,17 +1,22 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-<div class="main">
+    <div class="main">
         <h1>Quản lý danh mục</h1>
-        <form action="admin.php?act=addm" method="post">
-            <input type="text" name="name_cate" value="">
-            <input type="submit" value="Thêm mới" name="themmoi">
+        <form action="
+        " method="post">
+            <input type="text" name="ten_danhmuc" value="<?=$kq1[0]['ten_danhmuc']?>">
+            <input type="hidden" name="id" value="<?=$kq1[0]['id']?>">
+            <input type="submit" value="Sửa" name="">
         </form>
         <br>
         <br>
@@ -22,27 +27,26 @@
                 <th>Tên Danh mục</th>
                 <th>Độ ưu tiên</th>
                 <th> Trạng thái</th>
-                <th>Ảnh danh mục</th>
             </tr>
             <?php
             
-             $i=1;
-             foreach($kq as $dm){
+            $i=1;
+            foreach($kq1 as $dm){
                 if ($dm['trang_thai'] ==1 ){
-                    $visible = "Đang kích khoạt";
+                    $trang_thai = "Đang kích khoạt";
                 } else
-                 $visible = "Ngưng kích hoạt";
+                 $trang_thai = "Ngưng kích hoạt";
                 echo '
                 <tr>
                     <th>'.$i.'</th>
                     <th>'.$dm['ten_danhmuc'].'</th>
                     <th>'.$dm['uu_tien'].'</th>
-                    <th>'.$visible.'</th> <br>
-                    <th><a href="admin.php?act=updateform&id='.$dm['id'].'"> Sửa</a>  |<a href="admin.php?act=deldm&id='.$dm['id'].'"> Xóa</a></th>
+                    <th>'.$trang_thai.'</th> <br>
+                    <th><a href="../admin/index.php?act=updateform&id='.$dm['id'].'"> Sửa</a>  |<a href="../admin/index.php?act=deldm&id='.$dm['id'].'"> Xóa</a></th>
                  </tr>';
                  $i++;
             }
-             ?>
+            ?>
            
         </table>
     </div>
